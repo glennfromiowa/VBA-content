@@ -18,7 +18,7 @@ Loads and parses a text file as a new workbook with a single sheet that contains
 
 ## Syntax
 
- _expression_ . **OpenText**( **_Filename_** , **_Origin_** , **_StartRow_** , **_DataType_** , **_TextQualifier_** , **_ConsecutiveDelimiter_** , **_Tab_** , **_Semicolon_** , **_Comma_** , **_Space_** , **_Other_** , **_OtherChar_** , **_FieldInfo_** , **_TextVisualLayout_** , **_DecimalSeparator_** , **_ThousandsSeparator_** , **_TrailingMinusNumbers_** , **_Local_** )
+ _expression_ . **OpenText** **_Filename_** , **_Origin_** , **_StartRow_** , **_DataType_** , **_TextQualifier_** , **_ConsecutiveDelimiter_** , **_Tab_** , **_Semicolon_** , **_Comma_** , **_Space_** , **_Other_** , **_OtherChar_** , **_FieldInfo_** , **_TextVisualLayout_** , **_DecimalSeparator_** , **_ThousandsSeparator_** , **_TrailingMinusNumbers_** , **_Local_** 
 
  _expression_ A variable that represents a **Workbooks** object.
 
@@ -80,6 +80,8 @@ The following table shows the results of importing text into Excel for various i
 |Comma|Period|Period|Comma|123,123.45|123,123.45 (numeric)|
 |Period|Comma|Period|Comma|123 123.45|123 123.45 (text)|
 |Period|Comma|Period|Space|123 123.45|123,123.45 (numeric)|
+
+**Note:** Unlike other **Workbook** methods, for example, _Open_, _OpenText_ does not return a value and cannot be used in the parenthesized form.
 
 ## Example
 
