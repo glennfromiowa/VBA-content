@@ -25,8 +25,6 @@ Parses a column of cells that contain text into several columns.
 
 ### Parameters
 
-
-
 |**Name**|**Required/Optional**|**Data Type**|**Description**|
 |:-----|:-----|:-----|:-----|
 | _Destination_|Optional| **Variant**|A  **Range** object that specifies where Microsoft Excel will place the results. If the range is larger than a single cell, the top left cell is used.|
@@ -39,7 +37,7 @@ Parses a column of cells that contain text into several columns.
 | _Space_|Optional| **Variant**| **True** to have _DataType_ be **xlDelimited** and to have the space character be a delimiter. The default value is **False** .|
 | _Other_|Optional| **Variant**| **True** to have _DataType_ be **xlDelimited** and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is **False** .|
 | _OtherChar_|Optional| **Variant**|(required if  _Other_ is **True** ). The delimiter character when _Other_ is **True** . If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.|
-| _FieldInfo_|Optional| **Variant**|An array containing parse information for the individual columns of data. The interpretation depends on the value of  _DataType_, but generally, this argument is an array of two-element arrays, each one specifying the conversion options for a particular column. The first element is an integer, and the second element is one of the [xlColumnDataType](xlcolumndatatype-enumeration-excel.md) constants. See Remarks for more detail.|
+| _FieldInfo_|Optional| **Variant**|An array containing parse information for the individual columns of data. The interpretation depends on the value of  _DataType_, but generally, this argument is an array of two-element arrays, each one specifying the conversion options for a particular column. The first element is an integer, and the second element is one of the [xlColumnDataType](xlcolumndatatype-enumeration-excel.md) constants. See the following **Remarks** section for more detail.|
 | _DecimalSeparator_|Optional| **Variant**|The decimal separator that Microsoft Excel uses when recognizing numbers. The default setting is the system setting.|
 | _ThousandsSeparator_|Optional| **Variant**|The thousands separator that Excel uses when recognizing numbers. The default setting is the system setting.|
 | _TrailingMinusNumbers_|Optional| **Variant**|Numbers that begin with a minus character.|
@@ -52,7 +50,6 @@ Variant
 ## Remarks
 
 The following table shows the results of importing text into Excel for various import settings. Numeric results are displayed in the rightmost column.
-
 
 
 |**System decimal separator**|**System thousands separator**|**Decimal separator value**|**Thousands separator value**|**Original text**|**Cell value (data type)**|
@@ -122,10 +119,5 @@ Selection.TextToColumns DataType:=xlDelimited, _
 
 
 ## See also
-
-
-#### Concepts
-
-
 [Range Object](range-object-excel.md)
 
